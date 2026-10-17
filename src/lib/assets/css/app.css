@@ -1,0 +1,133 @@
+html {
+  scroll-behavior: smooth;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  margin: 0;
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  outline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-ring-color);
+}
+
+.skip-link {
+  background: var(--button-accent-background);
+  color: var(--button-accent-text);
+  left: 1rem;
+  padding: 0.7rem 1rem;
+  position: fixed;
+  top: -5rem;
+  z-index: 30;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.button {
+  align-items: center;
+  background: var(--button-primary-background);
+  border: 1px solid var(--button-primary-background);
+  color: var(--button-primary-text);
+  display: inline-flex;
+  font-size: 0.85rem;
+  font-weight: 800;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  &:hover {
+    background: var(--button-primary-hover-background);
+    border-color: var(--button-primary-hover-background);
+    color: var(--button-primary-hover-text);
+  }
+  &.button-alt {
+    background: var(--button-accent-background);
+    border-color: var(--button-accent-background);
+    color: var(--button-accent-text);
+    &:hover {
+      background: var(--button-accent-hover-background);
+      border-color: var(--button-accent-hover-background);
+      color: var(--button-accent-hover-text);
+    }
+  }
+  &.button-outline {
+    background: var(--button-accent-background);
+    border-color: var(--button-accent-background);
+    color: var(--button-accent-text);
+    &:hover {
+      background: var(--button-accent-hover-background);
+      border-color: var(--button-accent-hover-background);
+      color: var(--button-accent-hover-text);
+    }
+  }
+}
+
+.visually-hidden {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+nav ul {
+  list-style: none;
+}
+
+main {
+  min-height: 60vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
+

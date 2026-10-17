@@ -1,14 +1,16 @@
 <script lang="ts">
   let { compact = false }: { compact?: boolean } = $props();
   import Logo from "#lib/assets/images/logos/lamppost-logo-icon.svg";
+  import LogoDarkMode from "#lib/assets/images/logos/lamppost-logo-icon-light.svg";
 </script>
 
 <a
-  class={["brand-mark", { compact }]}
+	class={["brand-mark", { compact }]}
   href="/"
   aria-label="Lamppost Studios home"
 >
-  <img src={Logo} alt="" aria-hidden="true" width="90" height="177" style="height: auto;" />
+	<img class="brand-mark-logo brand-mark-logo-light" src={Logo} alt="" aria-hidden="true" width="90" height="177" />
+	<img class="brand-mark-logo brand-mark-logo-dark" src={LogoDarkMode} alt="" aria-hidden="true" width="90" height="177" />
 	{#if !compact}
 		<span id="brand-mark-text">
 			<strong id="brand-mark-name" class="font-display">LAMPPOST</strong>
@@ -24,11 +26,45 @@
     display: inline-flex;
     gap: 0.55rem;
     text-decoration: none;
-		img {
+    position: relative;
+		.brand-mark-logo {
 			width: 2.75rem;
 			height: auto;
 		}
   }
+	.brand-mark-logo-dark {
+		display: none;
+	}
+	:global(html[data-theme="dark"]) {
+		.brand-mark .brand-mark-logo-light {
+			display: none;
+		}
+		.brand-mark .brand-mark-logo-dark {
+			display: block;
+		}
+		.brand-mark::before {
+			content: '';
+			position: absolute;
+			left: -1.5em;
+			top: 65%;
+			transform: translate3d(0, -50%, 0);
+			background-image: radial-gradient(circle, hsla(from var(--color-accent) h s l / 0.5) 0%, transparent 60%);
+			width: 5em;
+			height: 5em;
+			z-index: -1;
+			animation: glow 0.15s infinite alternate;
+		}
+	}
+	@keyframes glow {
+		from {
+			transform: translate3d(0, -50%, 0) scale(1);
+			opacity: 0.5;
+		}
+		to {
+			transform: translate3d(0, -50%, 0) scale(1.1);
+			opacity: 0.5;
+		}
+	}
 	#brand-mark-text {
 		text-align: center;
 		font-size: 2rem;
@@ -39,7 +75,7 @@
 		display: block;
 	}
 	#brand-mark-subname {
-		font-size: 0.43em;
+		font-size: 0.4em;
 		letter-spacing: 0.4em;
 		display: block;
 		position: relative;

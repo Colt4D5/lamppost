@@ -1,5 +1,9 @@
 <script lang="ts">
-	import '../app.css';
+	import '#lib/assets/css/fonts.css';
+	import '#lib/assets/css/config.css';
+	import '#lib/assets/css/app.css';
+	import ebGaramondRegularUrl from '#lib/assets/fonts/EBGaramond-Regular.woff2';
+	import montserratRegularUrl from '#lib/assets/fonts/Montserrat-Regular.woff2';
 	import favicon from '#lib/assets/favicon.svg';
 	import SiteFooter from '#lib/components/Footer.svelte';
 	import SiteHeader from '#lib/components/Header.svelte';
@@ -16,6 +20,8 @@
 </script>
 
 <svelte:head>
+	<link rel="preload" href={ebGaramondRegularUrl} as="font" type="font/woff2" crossorigin="anonymous" />
+	<link rel="preload" href={montserratRegularUrl} as="font" type="font/woff2" crossorigin="anonymous" />
 	<link rel="icon" href={favicon} />
 	<meta name="description" content="Lamppost Studios designs web experiences and digital systems for ambitious teams." />
 	<meta name="theme-color" content="#08746e" />
