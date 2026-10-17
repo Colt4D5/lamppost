@@ -71,6 +71,7 @@ textarea {
   padding: 0.7rem 1rem;
   text-decoration: none;
   border-radius: 0.4rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
   &:hover {
     background: var(--button-primary-hover-background);
     border-color: var(--button-primary-hover-background);
