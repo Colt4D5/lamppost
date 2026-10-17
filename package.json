@@ -23,5 +23,8 @@
 	"imports": {
 		"#lib": "./src/lib/index.js",
 		"#lib/*": "./src/lib/*"
+	},
+	"dependencies": {
+		"@iconify-svelte/gravity-ui": "gitlab:iconify-icons/svelte#gravity-ui"
 	}
 }
