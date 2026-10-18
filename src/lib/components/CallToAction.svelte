@@ -18,13 +18,13 @@
     <h2>{title}</h2>
     <p>{description}</p>
   </div>
-  <a class="button button-gold" {href}>{label}</a>
+  <a class="button button-alt" {href}>{label}</a>
 </section>
 
 <style>
   .cta {
     align-items: end;
-    background: var(--color-primary-muted);
+    background: var(--color-primary);
     color: white;
     display: grid;
     gap: 1.5rem;

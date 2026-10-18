@@ -15,6 +15,21 @@
 		title: "Thoughtful Web Solutions for Real Businesses.",
 		description: "We design and build clean, modern websites that are fast, accessible, and built to grow with you."
 	}
+	const splitFeatures = [
+		{
+			label: "A better signal",
+			title: "Give your work a shape people can follow.",
+			description: "We find the essential story, make the paths through it deliberate, and build a visual system that stays recognizably yours.",
+			points: ['Editorial structure with purpose', 'Clear calls to action', 'A system your team can maintain'],
+			reverse: true
+		},
+		{
+			label: "Built for use",
+			title: "The strongest ideas survive contact with reality.",
+			description: "We pair high-resolution design with practical build decisions, so your site works just as hard behind the scenes.",
+			points: ['Responsive by default', 'Fast, accessible foundations', 'Purposeful content management']
+		}
+	]
 </script>
 
 <svelte:head>
@@ -40,8 +55,9 @@
 </section>
 
 <div class="features">
-	<SplitFeature label="A better signal" title="Give your work a shape people can follow." description="We find the essential story, make the paths through it deliberate, and build a visual system that stays recognizably yours." points={['Editorial structure with purpose', 'Clear calls to action', 'A system your team can maintain']} />
-	<SplitFeature reverse label="Built for use" title="The strongest ideas survive contact with reality." description="We pair high-resolution design with practical build decisions, so your site works just as hard behind the scenes." points={['Responsive by default', 'Fast, accessible foundations', 'Purposeful content management']} />
+	{#each splitFeatures as feature (feature.label)}
+		<SplitFeature {...feature} />
+	{/each}
 </div>
 
 <CallToAction />
