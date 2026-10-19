@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PageHero from '#lib/components/PageHero.svelte';
+	import PageHero from '#lib/components/Hero.svelte';
 	import type { PageProps } from './$types';
 
 	let { form }: PageProps = $props();

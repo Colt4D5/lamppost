@@ -30,10 +30,17 @@
 		.brand-mark-logo {
 			width: 2.75rem;
 			height: auto;
+			transition: width 0.5s ease;
 		}
   }
 	.brand-mark-logo-dark {
 		display: none;
+	}
+	:global(body.is-scrolled .brand-mark .brand-mark-logo) {
+		width: 1.5rem;
+	}
+	:global(body.is-scrolled #brand-mark-text) {
+		font-size: 1.5rem;
 	}
 	:global(html[data-theme="dark"]) {
 		.brand-mark .brand-mark-logo-light {
@@ -69,6 +76,7 @@
 		text-align: center;
 		font-size: 2rem;
 		color: var(--text-color);
+		transition: font-size 0.5s ease;
 	}
 	#brand-mark-name {
 		font-size: 1em;

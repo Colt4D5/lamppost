@@ -1,0 +1,119 @@
+- generic [ref=e2]:
+  - link "Skip to content" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Lamppost Studios home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]:
+          - strong [ref=e9]: LAMPPOST
+          - generic [ref=e10]: WEB STUDIOS
+      - navigation "Main navigation" [ref=e11]:
+        - list [ref=e12]:
+          - listitem [ref=e13]:
+            - link "Home" [ref=e14] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e15]:
+            - link "About" [ref=e16] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e17]:
+            - link "Projects" [ref=e18] [cursor=pointer]:
+              - /url: /projects
+          - listitem [ref=e19]:
+            - link "Reviews" [ref=e20] [cursor=pointer]:
+              - /url: /reviews
+          - listitem [ref=e21]:
+            - link "Contact" [ref=e22] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e23]:
+        - link "Get Started" [ref=e24] [cursor=pointer]:
+          - /url: /contact
+        - button "Switch to dark theme" [ref=e26] [cursor=pointer]
+  - main [ref=e32]:
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - paragraph [ref=e35]: Beautiful Websites. Lasting Impact.
+        - heading "Thoughtful Web Solutions for Real Businesses." [level=1] [ref=e36]
+        - paragraph [ref=e37]: We design and build clean, modern websites that are fast, accessible, and built to grow with you.
+        - link [ref=e38] [cursor=pointer]:
+          - /url: /contact
+      - generic [aria-hidden] [ref=e42]:
+        - figure [ref=e43]
+        - figure [ref=e48]
+        - figure [ref=e53]
+        - figure [ref=e58]
+        - figure [ref=e63]
+        - figure [ref=e68]
+    - region [ref=e73]:
+      - generic [ref=e74]:
+        - paragraph [ref=e75]: What we do
+        - heading "Useful design. Built to carry the work." [level=2] [ref=e76]
+      - generic [ref=e77]:
+        - article [ref=e78]:
+          - paragraph [ref=e79]: "01"
+          - heading "Brand websites" [level=2] [ref=e80]
+          - paragraph [ref=e81]: A memorable front door built around your actual business, not a borrowed template.
+          - list [ref=e82]:
+            - listitem [ref=e83]: "->Positioning and messaging"
+            - listitem [ref=e84]: "->Information architecture"
+            - listitem [ref=e85]: "->Design and build"
+        - article [ref=e86]:
+          - paragraph [ref=e87]: "02"
+          - heading "Digital tools" [level=2] [ref=e88]
+          - paragraph [ref=e89]: Useful portals, platforms, and product surfaces that make complex work feel direct.
+          - list [ref=e90]:
+            - listitem [ref=e91]: "->Workflow mapping"
+            - listitem [ref=e92]: "->Interface systems"
+            - listitem [ref=e93]: "->Accessible implementation"
+        - article [ref=e94]:
+          - paragraph [ref=e95]: "03"
+          - heading "Growth foundations" [level=2] [ref=e96]
+          - paragraph [ref=e97]: A considered system for teams ready to publish, learn, and improve without losing the thread.
+          - list [ref=e98]:
+            - listitem [ref=e99]: "->Content systems"
+            - listitem [ref=e100]: "->Measurement plans"
+            - listitem [ref=e101]: "->Ongoing partnership"
+    - generic [ref=e102]:
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: A better signal
+        - heading "Give your work a shape people can follow." [level=2] [ref=e110]
+        - paragraph [ref=e111]: We find the essential story, make the paths through it deliberate, and build a visual system that stays recognizably yours.
+        - list [ref=e112]:
+          - listitem [ref=e113]: Editorial structure with purpose
+          - listitem [ref=e114]: Clear calls to action
+          - listitem [ref=e115]: A system your team can maintain
+      - generic [ref=e121]:
+        - paragraph [ref=e122]: Built for use
+        - heading "The strongest ideas survive contact with reality." [level=2] [ref=e123]
+        - paragraph [ref=e124]: We pair high-resolution design with practical build decisions, so your site works just as hard behind the scenes.
+        - list [ref=e125]:
+          - listitem [ref=e126]: Responsive by default
+          - listitem [ref=e127]: Fast, accessible foundations
+          - listitem [ref=e128]: Purposeful content management
+    - generic [ref=e129]:
+      - generic [ref=e130]:
+        - paragraph [ref=e131]: Lamppost Studios
+        - heading "Bring clarity to your next move." [level=2] [ref=e132]
+        - paragraph [ref=e133]: Tell us where your work is headed. We will help you make the digital experience worthy of it.
+      - link "Start a conversation" [ref=e134] [cursor=pointer]:
+        - /url: /contact
+  - contentinfo [ref=e135]:
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - link "Lamppost Studios home" [ref=e138] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e140]:
+            - strong [ref=e141]: LAMPPOST
+            - generic [ref=e142]: WEB STUDIOS
+        - paragraph [ref=e143]: Web design and digital systems for teams with somewhere to go.
+      - navigation "Footer navigation" [ref=e144]:
+        - link "About" [ref=e145] [cursor=pointer]:
+          - /url: /about
+        - link "Projects" [ref=e146] [cursor=pointer]:
+          - /url: /projects
+        - link "Reviews" [ref=e147] [cursor=pointer]:
+          - /url: /reviews
+        - link "Contact" [ref=e148] [cursor=pointer]:
+          - /url: /contact
+      - paragraph [ref=e149]: © 2026 Lamppost Studios.
+    - paragraph [ref=e151]: © 2026 Lamppost Studios | All rights reserved.

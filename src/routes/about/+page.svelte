@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CallToAction from '#lib/components/CallToAction.svelte';
-	import PageHero from '#lib/components/PageHero.svelte';
+	import PageHero from '#lib/components/Hero.svelte';
 	import SplitFeature from '#lib/components/SplitFeature.svelte';
 </script>
 

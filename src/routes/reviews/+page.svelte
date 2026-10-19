@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CallToAction from '#lib/components/CallToAction.svelte';
-	import PageHero from '#lib/components/PageHero.svelte';
+	import PageHero from '#lib/components/Hero.svelte';
 	import TestimonialCard from '#lib/components/TestimonialCard.svelte';
 	const testimonials = [
 		{ quote: 'They took a complicated story and gave us a site our whole team can use with confidence.', name: 'Mara Coleman', role: 'Director, Tandem Health' }, { quote: 'Lamppost asked better questions than anyone else in the room. The result feels inevitable.', name: 'Elias Chen', role: 'Founder, Northline' }, { quote: 'We gained a partner who could hold strategy and detail at the same time.', name: 'Simone Wells', role: 'Head of Brand, Morrow Field' }, { quote: 'The process was exacting, human, and remarkably clear from start to finish.', name: 'Ravi Shah', role: 'Operations Lead, Truss Works' }, { quote: 'Our new platform has made it much easier for people to understand what we offer.', name: 'Lydia Frost', role: 'Program Director, Civic Thread' }, { quote: 'The team gave our work a bolder voice without losing its restraint.', name: 'Oliver Grant', role: 'Principal, Juniper House' }

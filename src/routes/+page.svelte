@@ -1,14 +1,17 @@
 <script lang="ts">
 	import CallToAction from '#lib/components/CallToAction.svelte';
-	import PageHero from '#lib/components/PageHero.svelte';
+	import PageHero from '#lib/components/Hero.svelte';
 	import ServiceCard from '#lib/components/ServiceCard.svelte';
 	import SplitFeature from '#lib/components/SplitFeature.svelte';
 	import IconArrowRight from "@iconify-svelte/gravity-ui/arrow-right";
 
 	const services = [
-		{ number: '01', title: 'Brand websites', description: 'A memorable front door built around your actual business, not a borrowed template.', outcomes: ['Positioning and messaging', 'Information architecture', 'Design and build'] },
-		{ number: '02', title: 'Digital tools', description: 'Useful portals, platforms, and product surfaces that make complex work feel direct.', outcomes: ['Workflow mapping', 'Interface systems', 'Accessible implementation'] },
-		{ number: '03', title: 'Growth foundations', description: 'A considered system for teams ready to publish, learn, and improve without losing the thread.', outcomes: ['Content systems', 'Measurement plans', 'Ongoing partnership'] }
+		{ number: '01', title: 'Mobile First Design', description: 'We start building your site for mobile devices first making sure the code is as lean and optimized with no bloated waste and makes the site even more responsive.', outcomes: ['Positioning and messaging', 'Information architecture', 'Design and build'] },
+		{ number: '02', title: 'Fully Responsive', description: 'Your website will fit all mobile screens sizes, tablets, and desktop sizes so visitors can access your site from anywhere and see a beautiful site no matter the screen size.', outcomes: ['Workflow mapping', 'Interface systems', 'Accessible implementation'] },
+		{ number: '03', title: 'Optimized Page Speed', description: 'If your site takes more than 3 seconds to load you can lose up to 50% your traffic because it took too long. Our sites load 1 second or less ensuring everyone that visits your site reaches it.', outcomes: ['Content systems', 'Measurement plans', 'Ongoing partnership'] },
+		{ number: '04', title: 'SEO Services', description: 'We have an in-house SEO specialist who understands local SEO and how to rank in your local market with plenty of case studies to show results and monthly reports.', outcomes: ['Positioning and messaging', 'Information architecture', 'Design and build'] },
+		{ number: '05', title: 'Google PPC Ads', description: 'We also offer Pay-Per-Click Google ads creation and management with our Google Ads expert who can create effective ad campaigns to maximize your ROI.', outcomes: ['Workflow mapping', 'Interface systems', 'Accessible implementation'] },
+		{ number: '06', title: 'Based in the USA', description: 'We do not hire cheap overseas developers. We are mostly based in the USA with team members in Washington, Texas, Pennsylvania, and the UK and work 100% remote from home.', outcomes: ['Content systems', 'Measurement plans', 'Ongoing partnership'] },
 	];
 	const hero = {
 		eyebrow: "Beautiful Websites. Lasting Impact.",

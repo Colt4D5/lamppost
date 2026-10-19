@@ -39,6 +39,14 @@ textarea {
   outline-offset: 3px;
 }
 
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  &:hover {
+    color: var(--link-hover-color);
+  }
+}
+
 :focus-visible {
   outline: 3px solid var(--focus-ring-color);
 }
@@ -70,7 +78,7 @@ textarea {
   min-height: 2.75rem;
   padding: 0.7rem 1rem;
   text-decoration: none;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
   corner-shape: scoop;
   transition: background-color 0.3s ease, color 0.3s ease;
   &:hover {
@@ -109,6 +117,38 @@ textarea {
   width: 1px;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+}
+
+*:has(> .theme-underline) {
+  position: relative;
+}
+.theme-underline {
+  &.top-underline {
+    &::before, &::after {
+      top: 0;
+    }
+    &::after {
+      top: 8px;
+    }
+  }
+  &::before, &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    height: 1px;
+    background: var(--underline-color);
+  }
+  &::before {
+    height: 4px;
+  }
+  &::after {
+    top: calc(100% + 8px);
+    width: calc(100% - 1rem);
+  }
 }
 
 nav ul {

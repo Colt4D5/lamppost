@@ -3,6 +3,7 @@
   import BrandMark from "./BrandMark.svelte";
   import ThemeToggle from "./ThemeToggle.svelte";
 
+  let scrolled = $state(false);
   let menuOpen = $state(false);
   const links = [
     { href: "/", label: "Home" },
@@ -51,12 +52,20 @@
   function handleKeydown(event: KeyboardEvent) {
     if (event.key === "Escape") closeMenu();
   }
+
+  function updateScrollState() {
+    scrolled = window.scrollY > 0;
+  }
+
+  $effect(() => {
+    document.body.classList.toggle("is-scrolled", scrolled);
+  });
 </script>
 
-<svelte:window onkeydown={handleKeydown} />
+<svelte:window onscroll={updateScrollState} onkeydown={handleKeydown} />
 
 <header>
-  <div class="header-inner">
+  <div class="header-inner theme-underline">
     <BrandMark />
     <button
       class="menu-button"
@@ -116,10 +125,19 @@
     max-width: var(--page-width);
     min-height: 4.75rem;
     padding: 1rem var(--page-gutter);
+    transition: padding-block 0.5s ease;
 		@media (min-width: 760px) {
 			grid-template-columns: auto 1fr auto;
 			gap: 4rem;
 		}
+    &::before, &::after {
+      width: var(--page-width);
+      transition: width 0.5s ease;
+    }
+    &::after {
+      top: calc(100% + 8px);
+      width: calc(var(--page-width) - 1rem);
+    }
   }
   nav {
     background: var(--color-light);
@@ -170,12 +188,13 @@
 			}
 			li {
 				a {
-					color: var(--link-hover-color);
+					/* color: var(--link-hover-color); */
 					padding: 0.75rem 0.5rem;
 					text-decoration: none;
 					text-transform: lowercase;
 					border-left: 3px solid transparent;
 					border-bottom: 3px solid transparent;
+          border-top: 3px solid transparent;
 					@media (min-width: 760px) {
 						padding: 0.5rem;
 					}
@@ -192,7 +211,7 @@
 						border-left: 3px solid var(--link-color);
 						@media (min-width: 760px) {
 							border-left: none;
-							border-bottom: 3px solid var(--link-color);
+							border-top: 3px solid var(--link-color);
 						}
 					}
 				}
@@ -222,5 +241,11 @@
 		@media (min-width: 760px) {
 			display: inline-flex;
 		}
+  }
+  :global(body:not(.is-scrolled) .header-inner::before, body:not(.is-scrolled) .header-inner::after) {
+    width: 100% !important;
+  }
+  :global(body.is-scrolled .header-inner) {
+    padding-block: 0.25rem;
   }
 </style>

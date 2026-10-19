@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CallToAction from '#lib/components/CallToAction.svelte';
-	import PageHero from '#lib/components/PageHero.svelte';
+	import PageHero from '#lib/components/Hero.svelte';
 	import PortfolioGrid from '#lib/components/PortfolioGrid.svelte';
 	const projects = [
 		{ name: 'Morrow Field', category: 'Hospitality', summary: 'A considered booking story for a landscape-led retreat.', accent: '#edb63d' }, { name: 'Truss Works', category: 'Manufacturing', summary: 'A clearer digital home for technical expertise.', accent: '#08746e' }, { name: 'Civic Thread', category: 'Public service', summary: 'Tools and language for a community institution.', accent: '#d66c47' }, { name: 'Tandem Health', category: 'Health', summary: 'A calm service experience for a growing clinic.', accent: '#6fb8b4' }, { name: 'Juniper House', category: 'Property', summary: 'A portfolio that makes each place feel distinct.', accent: '#ba8dca' }, { name: 'Northline', category: 'Logistics', summary: 'A practical platform for connected operations.', accent: '#5298cb' }];
